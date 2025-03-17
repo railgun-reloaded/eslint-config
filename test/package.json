@@ -1,0 +1,12 @@
+{
+  "name": "test",
+  "scripts": {
+    "test": "eslint"
+  },
+  "dependencies": {
+    "@railgun-reloaded/tsconfig": "^1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.22.0"
+  }
+}
