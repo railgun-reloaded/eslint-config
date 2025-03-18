@@ -1,4 +1,4 @@
-function noJSDoc() {
+function noJSDoc () {
   console.log('Hello World')
 }
 
@@ -9,7 +9,7 @@ class NoJSDoc {
     this.state = initial
   }
 
-  increment() {
+  increment () {
     this.state += 1
   }
 }
