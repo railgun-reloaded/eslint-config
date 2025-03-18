@@ -15,10 +15,15 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "npm test --prefix=./test"
+    "test": "brittle test/index.test.js"
   },
   "dependencies": {
     "eslint-plugin-jsdoc": "^50.6.6",
     "neostandard": "^0.12.1"
+  },
+  "devDependencies": {
+    "@railgun-reloaded/tsconfig": "^1.1.0",
+    "brittle": "^3.12.2",
+    "eslint": "^9.22.0"
   }
 }
