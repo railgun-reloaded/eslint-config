@@ -15,7 +15,8 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "brittle test/index.test.js"
+    "test": "brittle test/index.test.js",
+    "lint": "npx eslint"
   },
   "dependencies": {
     "eslint-plugin-jsdoc": "^50.6.6",
