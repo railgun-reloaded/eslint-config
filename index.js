@@ -9,6 +9,7 @@ module.exports = function eslintConfig (opts = {}) {
   })
 
   // AST Contexts we want JSDoc enforced in
+  // Documentation for available ASTs can be found at https://github.com/estree/estree
   const jsdocContexts = [
     'ArrowFunctionExpression',
     'ClassDeclaration',
