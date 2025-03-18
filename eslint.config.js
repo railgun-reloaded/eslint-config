@@ -1,3 +1,8 @@
+const neostandard = require('neostandard')
+
 module.exports = [
-  ...require('./index.js')()
+  ...neostandard({
+    ts: false,
+    ignores: neostandard.resolveIgnoresFromGitignore(),
+  })
 ]
