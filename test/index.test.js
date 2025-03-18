@@ -14,7 +14,36 @@ async function getErrors (testFiles) {
   return results
 }
 
-test('railgun-reloaded/jsdoc', async function (assert) {
+test('imports', async function (assert) {
+  const [exportsOutput, importsOutput] = await getErrors(['src/imports/exports.ts', 'src/imports/imports.ts'])
+
+  assert.ok(
+    exportsOutput.messages[0].message === 'Type export a is not a value and should be exported using `export type`.',
+    'Explicit type export'
+  )
+
+  assert.ok(
+    importsOutput.messages[0].message === 'Imports "d" are only used as type.',
+    'Explicit type import'
+  )
+
+  assert.ok(
+    importsOutput.messages[1].message === 'There should be at least one empty line between import groups',
+    'Space import groups'
+  )
+
+  assert.ok(
+    importsOutput.messages[2].message === "Member 'b' of the import declaration should be sorted alphabetically.",
+    'Sort import declaration'
+  )
+
+  assert.ok(
+    importsOutput.messages[3].message === '`eslint` import should occur before import of `./exports`',
+    'Group imports'
+  )
+})
+
+test('jsdoc', async function (assert) {
   const [output] = await getErrors(['src/jsdoc.ts'])
 
   assert.ok(
