@@ -1,6 +1,6 @@
 {
   "name": "@railgun-reloaded/eslint-config",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Shared eslint-config config for railgun-reloaded projects",
   "homepage": "https://github.com/railgun-reloaded/eslint-config#readme",
   "bugs": {
