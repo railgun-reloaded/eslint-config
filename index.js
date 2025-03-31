@@ -1,7 +1,7 @@
 const jsdoc = require('eslint-plugin-jsdoc')
 const neostandard = require('neostandard')
 
-module.exports = function eslintConfig (opts = {}) {
+module.exports = function eslintConfig(opts = {}) {
   const neoconf = neostandard({
     ts: true,
     ignores: neostandard.resolveIgnoresFromGitignore(),
@@ -25,6 +25,7 @@ module.exports = function eslintConfig (opts = {}) {
     plugins: {
       '@typescript-eslint': neostandard.plugins['typescript-eslint'].plugin
     },
+    ignores: ['eslint.config.js'],
     languageOptions: {
       parser: neostandard.plugins['typescript-eslint'].parser,
       parserOptions: {
