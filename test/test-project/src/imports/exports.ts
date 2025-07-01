@@ -6,9 +6,5 @@ const c = ''
 
 type d = string
 
-interface foo {
-  a: string
-}
-
 export type { d }
 export { b, a, c }
