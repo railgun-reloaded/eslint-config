@@ -35,6 +35,7 @@ module.exports = function eslintConfig(opts = {}) {
     rules: {
       '@typescript-eslint/consistent-type-imports': 'error', // Importing types must be done with import type
       '@typescript-eslint/consistent-type-exports': 'error', // Exporting types must be done with export type
+      '@typescript-eslint/consistent-type-definitions': ['error', 'type']
     }
   }
 
